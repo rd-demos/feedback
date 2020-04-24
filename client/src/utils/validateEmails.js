@@ -6,7 +6,11 @@ export default (emails) => {
     .map((email) => email.trim())
     .filter((email) => re.test(email) === false);
 
-  if (invalidEmails.length && invalidEmails != '') {
+  if (invalidEmails[invalidEmails.length - 1] === '') {
+    invalidEmails.pop();
+  }
+
+  if (invalidEmails.length) {
     return `These emails are invalid: ${invalidEmails}`;
   }
 
