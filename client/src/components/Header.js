@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
+import logo from '../assets/logo-2.svg';
 
 class Header extends Component {
   renderContent() {
@@ -35,9 +36,9 @@ class Header extends Component {
         <div className="nav-wrapper">
           <Link
             to={this.props.auth ? '/surveys' : '/'}
-            className="left brand-logo"
+            className="brand-logo left"
           >
-            Feedback
+            feedBack
           </Link>
           <ul className="right">{this.renderContent()}</ul>
         </div>
